@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+class Message {
+public:
+    Message() {
+        cout << "Welcome to C++ Programming!" << endl;
+    }
+    ~Message() {
+        cout << "Goodbye from C++!" << endl;
+    }
+};
+int main() {
+    Message m;
+    return 0;
+}
