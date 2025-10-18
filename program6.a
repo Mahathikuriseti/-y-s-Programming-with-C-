@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Number {
+private:
+    int value;
+
+public:
+    // Constructor
+    Number(int v = 0) : value(v) {}
+
+    // Display function
+    void display() const {
+        cout << "Value: " << value << endl;
+    }
+
+    // Binary operator overloading: +
+    Number operator+(const Number& other) const {
+        return Number(this->value + other.value);
+    }
+
+    // Unary operator overloading: - (negation)
+    Number operator-() const {
+        return Number(-this->value);
+    }
+};
+
+int main() {
+    Number num1(10), num2(20), result;
+
+    cout << "Initial Values:" << endl;
+    num1.display();
+    num2.display();
+
+    // Binary +
+    result = num1 + num2;
+    cout << "\nAfter Binary + Operator (num1 + num2):" << endl;
+    result.display();
+
+    // Unary -
+    result = -num1;
+    cout << "\nAfter Unary - Operator (-num1):" << endl;
+    result.display();
+
+    return 0;
+}
