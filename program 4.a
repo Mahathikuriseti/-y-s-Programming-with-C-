@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class Calculator {
+public:
+    void compute() {
+        cout << "No parameters: Default computation" << endl;
+    }
+    void compute(int a) {
+        cout << "One integer: Square = " << a * a << endl;
+    }
+    void compute(double a, int b) {
+        cout << "Double and int: Product = " << a * b << endl;
+    }
+};
+int main() {
+    Calculator c;
+    c.compute();              
+    c.compute(5);             
+    c.compute(2.5, 4);        
+    return 0;
+}
